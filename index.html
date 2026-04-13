@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruits</title>
+
+<style>
+
+body {
+font-family: Arial;
+background-color: #ffe;
+padding: 20px;
+}
+
+.card {
+background-color: white;
+padding: 15px;
+margin: 10px;
+border-radius: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Fruits List</h1>
+
+{% for f in fruit_lengths %}
+
+<div class="card">
+
+<h2>{{ f.fruit }}</h2>
+
+<p>Length: {{ f.length }}</p>
+
+</div>
+
+{% endfor %}
+
+<h2>Longest Fruit: {{ longest }}</h2>
+
+<h2>Shortest Fruit: {{ shortest }}</h2>
+
+</body>
+</html>
